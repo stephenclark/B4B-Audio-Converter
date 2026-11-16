@@ -1,0 +1,6 @@
+# Audiobooks and generated chapters (keep the folder itself)
+books/*
+!books/.gitkeep
+
+# macOS
+.DS_Store
