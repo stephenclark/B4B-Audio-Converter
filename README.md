@@ -1,6 +1,6 @@
 # B4B Audio Converter
 
-Splits an audiobook (`.b4b` / `.m4b`) into one file per chapter, using ffmpeg inside a Docker container. Nothing is installed on your Mac apart from Docker itself.
+Splits an audiobook (`.b4b` / `.m4b`) into one file per chapter, using ffmpeg inside a Docker container. Nothing is installed on your computer apart from Docker itself.
 
 By default the audio is copied as-is into `.m4a` files: lossless and fast. Chapter titles, book title, author and track numbers are written into each file's tags.
 
@@ -42,7 +42,6 @@ Output lands in `books/<book name>_chapters/`, with files named like `02 - Chapt
 - DRM-protected books (e.g. Audible) can't be read by ffmpeg.
 - `--mp3` re-encodes (VBR quality 2, roughly 190 kbps), so it's slower and slightly lossy. Use it only if your player won't take M4A.
 - The script is copied into the image at build time. After editing `split_audiobook.py`, run `docker compose build` again.
-- If the folder lives in iCloud Drive, make sure files are fully downloaded, otherwise Docker may see them as empty.
 
 ## Cleanup
 
